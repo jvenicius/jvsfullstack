@@ -2,12 +2,13 @@ body {
     background-color:white;
 }
 
-.list-group-item {
-    cursor: pointer;
+#logo {
+    font-family: Chalkduster, fantasy;
+    font-size: 30px;
 }
 
-#logo {
-    font-size: 25px;
+.list-group-item {
+    cursor: pointer;
 }
 
 .footer {
