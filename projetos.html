@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!-- CSS Pessoal -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>jVs FullStack</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <a id="logo" class="navbar-brand ml-5" href="#">jVs</a>
+    
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto ml-5 mt-2 mt-lg-0 mx-auto">
+            <li class="nav-item active px-4">
+            <a class="nav-link" href="index.html">Início <span class="sr-only">(Página atual)</span></a>
+            </li>
+            <!-- <li class="nav-item dropdown px-4">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ferramentas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="tarefas.html">Tarefas</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item disabled" href="#">Em manutenção</a>
+                </div>
+            </li> -->
+            <li class="nav-item px-4">
+                <a class="nav-link" href="projetos.html">Projetos</a>
+            </li>
+            <li class="nav-item px-4">
+                <a class="nav-link" href="tarefas.html">Tarefas</a>
+            </li>
+            <li class="nav-item px-4">
+                <a class="nav-link" href="#">Contatos</a>
+            </li>
+            <li class="nav-item px-4">
+                <a class="nav-link disabled" href="#">Em manutenção</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <main role="main" class="container my-4 bg-dark text-white py-4" id="bg-principal"> 
+        <header role="header" class="header text-center text-uppercase text-primary">
+            <h3>Projetinhos</h3>
+        </header>
+        <hr class="bg-primary">
+        <div class="row mt-4">
+            <div class="col-3">
+                <ul class="list-group text-center">
+                    <li id="p1" class="list-group-item text-dark" onclick="selecionarP1()">Calculadora</li>
+                    <li id="p2" class="list-group-item text-dark" onclick="selecionarP2()">Quiz</li>
+                </ul>
+            </div>
+            <div class="col-8 text-justify">
+                <p class="text-muted" id="p-descricao">
+                    A descrição do projeto aparecerá aqui.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer bg-dark" role="footer">
+        <footer>Siga-me no instagram @jvsdev</footer>
+    </div>
+
+    <!-- JavaScript (Opcional) -->
+    <script src="/js/meujs.js"></script>
+
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

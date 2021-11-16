@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!-- CSS Pessoal -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Tarefas</title>
+</head>
+<body>
+
+    <!-- Início do menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <a id="logo" class="navbar-brand ml-5" href="#">jVs</a>
+    
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto ml-5 mt-2 mt-lg-0">
+            <li class="nav-item active px-2">
+            <a class="nav-link" href="index.html">Início <span class="sr-only">(Página atual)</span></a>
+            </li>
+            <li class="nav-item dropdown px-2">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ferramentas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="tarefas.html">Tarefas</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item disabled" href="#">Em manutenção</a>
+                </div>
+            </li>
+            <li class="nav-item px-2">
+            <a class="nav-link" href="#">Contato</a>
+            </li>
+            <li class="nav-item px-2">
+                <a class="nav-link disabled" href="#">Em manutenção</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
+        </div>
+    </nav>
+    <!-- Fim do menu -->
+    
+    <header role="header" class="header text-center text-uppercase bg-light text-dark mt-2">
+        Área de criação de tarefas!
+    </header>
+    <hr>
+    <main role="main" class="container my-4 bg-dark text-white">   
+        <div class="row mt-4">
+            <div class="col-9 text-center border-right p-3">
+                Cadastre ou edite uma tarefa já existente!
+                <hr>
+                <form method="">
+                    <div class="form-group text-left">
+                      <label for="entradaTitulo">Digite o título da tarefa</label>
+                      <input type="text" class="form-control w-50" id="entradaTitulo" aria-describedby="tituloHelp" placeholder="Título">
+                      <small id="tituloHelp" class="form-text text-muted">Poderá ser alterado posteriormente.</small>
+                    </div>
+                    <div class="form-group text-left">
+                        <label for="exampleFormControlTextarea1">Descrição da tarefa</label>
+                        <textarea class="form-control w-100" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                    <div class="form-group form-check text-left">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Assinale para confirmar.</label>
+                    </div>
+                    <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#modalConfirmar">Salvar</button>
+                  </form>
+            </div>
+            <div class="col text-justify text-center pt-3">
+                Lista de tarefas!
+                <hr>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalConfirmar" tabindex="-1" role="dialog" aria-labelledby="modalConfirmarLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalConfirmarLabel">Caixa de confirmação</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Deseja salvar as alterações?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Salvar mudanças</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+<!-- 
+    <div class="footer bg-dark" role="footer">
+        <footer>&copy jVs</footer>
+    </div> -->
+
+    <!-- JavaScript (Opcional) -->
+    <script src="/js/meujs.js"></script>
+
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
