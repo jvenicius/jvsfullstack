@@ -2,6 +2,10 @@ body {
     background-color:white;
 }
 
+#img-principal {
+    border-radius: 20%;
+}
+
 #logo {
     font-family: Chalkduster, fantasy;
     font-size: 30px;
