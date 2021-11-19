@@ -55,8 +55,24 @@
         Calculadora
     </header>
     <hr>
-    <main role="main" class="container my-4 bg-dark text-white"> 
-        
+    <main role="main" class="container my-4 bg-dark text-white">
+        <div class="row mt-4">
+            <div class="col-8 painel py-4">
+                <label for="painel">Painel: </label>
+                <input type="text" id="painel">
+                <span id="igualdade"><strong>=</strong></span>
+                <span id="resultado" class="text-muted">Estou de boas por enquanto</span>
+                <div class="pt-2">
+                    <input type="button" id="btn-calcular" value="calcular" onClick="calcular()">
+                </div>
+            </div>
+            <div class="border-left p-4">
+                <h4>Histórico</h4>
+                <div id="historico">
+
+                </div>
+            </div>
+        </div>
     </main>
 
 <!-- 
@@ -65,7 +81,7 @@
     </div> -->
 
     <!-- JavaScript (Opcional) -->
-    <script src="/js/meujs.js"></script>
+    <script src="/js/calculadora.js"></script>
 
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

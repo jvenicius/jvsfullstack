@@ -28,6 +28,18 @@ body {
     box-shadow:5px 5px 2px gray;
 }
 
-.img-centralizada {
+.centralizado {
     text-align: center;
+}
+
+#igualdade {
+    font-size: 20px;
+}
+
+#painel {
+    border-radius: 5px;
+}
+
+#btn-calcular {
+    border-radius: 5px;
 }

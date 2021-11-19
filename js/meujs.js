@@ -18,14 +18,14 @@ function selecionarP1() {
     p3.classList.remove("active")
 
     desc.innerHTML = `
-    <div class="img-centralizada">
+    <div class="centralizado">
     <img src="img/img-calculadora.jpg" id="img-calculadora" alt="img-calculadora" width="400">
     </div>
     <div class="mt-2">
     <p>
     Calculadora é um dispositivo para a realização de cálculos numéricos. São considerados distinto das máquinas calculadoras
      e dos computadores, no sentido em que a calculadora é um 
-    dispositivo voltado para fins específicos e que não pode ser qualificada como uma Máquina de Turing.</p>
+    dispositivo voltado para fins específicos e que não pode ser qualificada como uma Máquina de Turing - <i>Wikipedia</i>.</p>
     <p>O projeto da calculadora está em desenvolvimento e 
     pode ser acessada clicando <a href="calculadora.html">aqui</a>.</p>
     </div>
