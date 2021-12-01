@@ -26,12 +26,33 @@ function calcular() {
     var n = parseFloat(valor);
 
     // INÍCIO - Cálculos
-   
+    if (valor.indexOf('+') !== undefined) {
+        var n1 = Number(valor.slice(0,valor.indexOf('+')));
+        var n2 = Number(valor.slice(valor.indexOf('+')+1,));
+        var res = n1+n2;
+    }
     
+    if (valor.indexOf('-') !== undefined) {
+        var n1 = Number(valor.slice(0,valor.indexOf('-')));
+        var n2 = Number(valor.slice(valor.indexOf('-')+1,));
+        var res = n1-n2;
+    }
+
+    if (valor.indexOf('*') !== undefined) {
+        var n1 = Number(valor.slice(0,valor.indexOf('*')));
+        var n2 = Number(valor.slice(valor.indexOf('*')+1,));
+        var res = n1*n2;
+    }
+    
+    if (valor.indexOf('/') !== undefined) {
+        var n1 = Number(valor.slice(0,valor.indexOf('/')));
+        var n2 = Number(valor.slice(valor.indexOf('/')+1,));
+        var res = n1/n2;
+    }
     // FIM - Cálculos
 
     resultado.classList.add('text-primary');
     resultado.classList.remove('text-muted');
-    resultado.innerHTML = `value: ${n}, Vetor: ${valor}`;
+    resultado.innerHTML = `${res}`;
     
 }
