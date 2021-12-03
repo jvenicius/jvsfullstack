@@ -40,8 +40,12 @@ body {
     height: 29px;
 } */
 
-.painel {
+.painel,#operador {
     border-radius: 5px;
+}
+
+#operador {
+    width: 2%;
 }
 
 #btn-calcular {
