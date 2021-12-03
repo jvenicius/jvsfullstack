@@ -40,11 +40,11 @@ body {
     height: 29px;
 } */
 
-.painel,#operador {
+.painel,#sinal {
     border-radius: 5px;
 }
 
-#operador {
+#sinal {
     width: 2%;
 }
 
