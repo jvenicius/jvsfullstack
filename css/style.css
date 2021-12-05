@@ -40,6 +40,10 @@ body {
     height: 29px;
 } */
 
+#historico {
+    width: 100%;
+}
+
 .painel,#sinal {
     border-radius: 5px;
 }
@@ -48,7 +52,7 @@ body {
     width: 2%;
 }
 
-#btn-calcular {
+.btn {
     border-radius: 5px;
 }
 

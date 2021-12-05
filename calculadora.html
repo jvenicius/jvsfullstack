@@ -14,7 +14,7 @@
 
     <title>Calculadora</title>
 </head>
-<body>
+<body onload=redefinir()>
 
     <!-- Início do menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -52,37 +52,40 @@
     <!-- Fim do menu -->
     
     <header role="header" class="header text-center text-uppercase bg-light text-dark mt-2">
-        Calculadora
+        Calculadora básica
     </header>
     <hr>
     <main role="main" class="container my-4 bg-dark text-white">
-        <div class="row mt-4">
-            <div class="col-10 painel py-4">
-                <span>Digite os números nos campos de entrada</span>
-                <div class="text-center">
-                    <input type="text" id="entrada1" class="painel">
-                    <!-- <input type="text" id="sinal" maxlength="1"> -->
-                    <select id="operadores" class="select">
-                        <option value="adicao">+</option>
-                        <option value="subtracao">-</option>
-                        <option value="divisao">/</option>
-                        <option value="multiplicacao">*</option>
-                    </select>
-                    <input type="text" id="entrada2" class="painel">
-                    <span id="igualdade"><strong>=</strong></span>
-                    <span id="resultado" class="text-muted">Aguardando...</span>
+        <form action="">
+            <div class="row mt-4">
+                <div class="col-9 painel py-4">
+                    <span class="p-2">Digite os números nos campos de entrada</span>
+                    <div class="text-center p-4">
+                        <input type="text" id="entrada1" class="painel">
+                        <!-- <input type="text" id="sinal" maxlength="1"> -->
+                        <select id="operadores" class="form-select">
+                            <option value="adicao">+</option>
+                            <option value="subtracao">-</option>
+                            <option value="divisao">/</option>
+                            <option value="multiplicacao" selected>*</option>
+                        </select>
+                        <input type="text" id="entrada2" class="painel">
+                        <span id="igualdade"><strong>=</strong></span>
+                        <span id="resultado" class="text-muted">Aguardando...</span>
+                    </div>
+                    <div class="pt-2 text-center pt-5">
+                        <input type="button" class="btn-primary btn" id="btn-calcular" value="calcular" onClick="calcular()">
+                        <input type="reset" class="btn-info btn ml-3" id="btn-redefinir" value="redefinir" onClick="redefinir()">
+                    </div>
                 </div>
-                <div class="pt-2">
-                    <input type="button" id="btn-calcular" value="calcular" onClick="calcular()">
-                </div>
-            </div>
-            <div class="border-left p-4">
-                <h4>Histórico</h4>
-                <div id="historico">
+                <div class="col border-left p-4">
+                    <h4 class='text-center'>Histórico</h4>
+                        <select class="form-select" id="historico" size=10 multiple aria-label="historico">
 
+                        </select>
                 </div>
             </div>
-        </div>
+        </form>
     </main>
 
 
