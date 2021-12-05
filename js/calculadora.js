@@ -37,6 +37,20 @@ painel.addEventListener("keypress", function(e) {
     };
 });
 
+// var saves = {
+//     n1_vec: [],
+//     n2_vec: [],
+//     res_vec: [],
+//     operacao_vec: []
+// }
+
+var n1_vec = [];
+var n2_vec = [];
+var res_vec = [];
+var operacao_vec = [];
+
+var c = 0
+
 function calcular() {
     // var valor = entrada.value;
     // var n = parseFloat(valor);
@@ -53,32 +67,48 @@ function calcular() {
                 var res = n1+n2
                 resultado.innerHTML = `${res.toFixed(2)}`
                 item.text = `${n1} + ${n2} = ${res}`
-                item.value = `${n1,n2,res,operacao}`
+                item.value = `${c}`
                 historico.appendChild(item);
+                n1_vec.push(n1);
+                n2_vec.push(n2);
+                res_vec.push(res);
+                operacao_vec.push(operacao);
                 break
             case 'multiplicacao':
                 var res = n1*n2
                 resultado.innerHTML = `${res.toFixed(2)}`
                 item.text = `${n1} x ${n2} = ${res}`
-                item.value = `${n1,n2,res,operacao}`
+                item.value = `${c}`
                 historico.appendChild(item);
+                // saves.n1_vec.push(n1);
+                // saves.n2_vec.push(n2);
+                // saves.res_vec.push(res);
+                // saves.operacao_vec.push(operacao);
                 break
             case 'divisao':
                 var res = n1/n2
                 resultado.innerHTML = `${res.toFixed(2)}`
                 item.text = `${n1} / ${n2} = ${res}`
-                item.value = `${n1,n2,res,operacao}`
+                item.value = `${c}`
                 historico.appendChild(item);
+                // saves.n1_vec.push(n1);
+                // saves.n2_vec.push(n2);
+                // saves.res_vec.push(res);
+                // saves.operacao_vec.push(operacao);
                 break
             case 'subtracao':
                 var res = n1-n2
                 resultado.innerHTML = `${res.toFixed(2)}`
                 item.text = `${n1} - ${n2} = ${res}`
-                item.value = `${n1,n2,res,operacao}`
+                item.value = `${c}`
                 historico.appendChild(item);
+                // saves.n1_vec.push(n1);
+                // saves.n2_vec.push(n2);
+                // saves.res_vec.push(res);
+                // saves.operacao_vec.push(operacao);
                 break
         }
-    }
+    } c++
 }
 
 function redefinir() {
@@ -87,3 +117,15 @@ function redefinir() {
     resultado.classList.add('text-muted')
 }
 
+function selecionar() {
+    var selected = historico.options[historico.selectedIndex];
+    var n1_s = n1_vec[selected.value]
+
+    window.alert(`${n1_vec}, ${selected.text}, ${c}`)
+}
+
+    // historico.options.length
+    // entrada1.value = item.value[0];
+    // entrada2.value = item.value[1];
+    // resultado.innerHTML = item.value[2];
+    // operacao.value = item.value[3];
