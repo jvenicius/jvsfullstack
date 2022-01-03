@@ -117,12 +117,12 @@ function redefinir() {
     resultado.classList.add('text-muted')
 }
 
-function selecionar() {
-    var selected = historico.options[historico.selectedIndex];
-    var n1_s = n1_vec[selected.value]
+// function selecionar() {
+//     var selected = historico.options[historico.selectedIndex];
+//     var n1_s = n1_vec[selected.value]
 
-    window.alert(`${n1_vec}, ${selected.text}, ${c}`)
-}
+//     window.alert(`${n1_vec}, ${selected.text}, ${c}`)
+// }
 
     // historico.options.length
     // entrada1.value = item.value[0];

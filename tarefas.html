@@ -51,6 +51,7 @@
     </nav>
     <!-- Fim do menu -->
     
+    <!-- Início do Conteúdo Principal -->
     <header role="header" class="header text-center text-uppercase bg-light text-dark mt-2">
         Área de criação de tarefas!
     </header>
@@ -58,29 +59,31 @@
     <main role="main" class="container my-4 bg-dark text-white"> 
         <div class="row mt-4">
             <div class="col-9 text-center border-right p-3">
-                Cadastre ou edite uma tarefa já existente!
+                <h3>Cadastre ou edite uma tarefa já existente!</h3>
                 <hr>
                 <form method="">
                     <div class="form-group text-left">
                       <label for="entradaTitulo">Digite o título da tarefa</label>
-                      <input type="text" class="form-control w-50" id="entradaTitulo" aria-describedby="tituloHelp" placeholder="Título">
+                      <input type="text" class="form-control w-50" id="entradaTitulo" aria-describedby="tituloHelp" placeholder="Digite um título.">
                       <small id="tituloHelp" class="form-text text-muted">Poderá ser alterado posteriormente.</small>
                     </div>
                     <div class="form-group text-left">
-                        <label for="exampleFormControlTextarea1">Descrição da tarefa</label>
-                        <textarea class="form-control w-100" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="entradaDescricao">Descrição da tarefa</label>
+                        <textarea class="form-control w-100" id="entradaDescricao" rows="5" placeholder="Descreva sua tarefa."></textarea>
                       </div>
                     <div class="form-group form-check text-left">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
                       <label class="form-check-label" for="exampleCheck1">Assinale para confirmar.</label>
                     </div>
-                    <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#modalConfirmar">Salvar</button>
+                    <button type="button" id="salvar" class="btn btn-primary text-center" data-toggle="modal" data-target="#modalConfirmar">Salvar</button>
                   </form>
             </div>
             <div class="col text-justify text-center pt-3">
-                Lista de tarefas!
+                <h3> Lista de Tarefas </h3>
                 <hr>
+                <select id="salvos" multiple size="18" aria-label="salvos" class="form-select">
 
+                </select>
             </div>
         </div>
     </main>
@@ -106,13 +109,15 @@
         </div>
     </div>
 
+    <!-- Fim do Conteúdo Principal -->
+
 <!-- 
     <div class="footer bg-dark" role="footer">
         <footer>&copy jVs</footer>
     </div> -->
 
     <!-- JavaScript (Opcional) -->
-    <script src="/js/meujs.js"></script>
+    <script src="/js/tarefas.js"></script>
 
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
