@@ -70,18 +70,18 @@
                     <div class="form-group text-left">
                         <label for="entradaDescricao">Descrição da tarefa</label>
                         <textarea class="form-control w-100" id="entradaDescricao" rows="5" placeholder="Descreva sua tarefa."></textarea>
-                      </div>
-                    <div class="form-group form-check text-left">
+                    </div>
+                    <!-- <div class="form-group form-check text-left">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
                       <label class="form-check-label" for="exampleCheck1">Assinale para confirmar.</label>
-                    </div>
-                    <button type="button" id="salvar" class="btn btn-primary text-center" data-toggle="modal" data-target="#modalConfirmar">Salvar</button>
+                    </div> -->
+                    <button type="button" id="salvar" class="btn btn-primary text-center" onclick="salvarItem()">Salvar</button>
                   </form>
             </div>
             <div class="col text-justify text-center pt-3">
                 <h3> Lista de Tarefas </h3>
                 <hr>
-                <select id="salvos" multiple size="18" aria-label="salvos" class="form-select">
+                <select id="salvos" multiple size="15" aria-label="salvos" class="form-select">
 
                 </select>
             </div>
@@ -89,6 +89,8 @@
     </main>
 
     <!-- Modal -->
+    
+    <!-- SEM USO POR ENQUANTO: data-toggle="modal" data-target="#modalConfirmar" -->
     <div class="modal fade" id="modalConfirmar" tabindex="-1" role="dialog" aria-labelledby="modalConfirmarLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
         <div class="modal-content">
