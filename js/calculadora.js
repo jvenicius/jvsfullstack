@@ -10,7 +10,6 @@ var historico = document.querySelector('#historico');
 // var operador = document.getElementById("sinal")
 var operadores = document.getElementById("operadores")
 
-
 // operador.addEventListener("keypress", function(s) {
 //     const sinais = ['+','-','*','/'];
 //     if (sinais.find(element => element == s.key) !== undefined) {

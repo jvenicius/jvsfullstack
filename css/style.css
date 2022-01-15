@@ -1,6 +1,11 @@
-body {
-    background-color:white;
+#bg {
+    /* background-image: url("/img/img-principal.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat; */
+    background-image: linear-gradient(45deg, #0c2d2f 50%, #12082c 50%);
 }
+
+
 
 #img-principal {
     border-radius: 20%;
@@ -9,6 +14,7 @@ body {
 #logo {
     font-family: Chalkduster, fantasy;
     font-size: 30px;
+    color: #B5FFD9;
 }
 
 .list-group-item {
@@ -25,7 +31,7 @@ body {
 
 .container {
     border-radius: 15px;
-    box-shadow:5px 5px 2px gray;
+    /* box-shadow:5px 5px 2px gray; */
 }
 
 .centralizado {
