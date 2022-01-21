@@ -1,20 +1,34 @@
-#bg {
-    /* background-image: url("/img/img-principal.jpg");
-    background-color: #cccccc;
-    background-repeat: no-repeat; */
-    background-image: linear-gradient(45deg, #0c2d2f 50%, #12082c 50%);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
-
-#img-principal {
-    border-radius: 20%;
+.nav-item {
+    color: #eee;
+    font-size: 1.2rem;
 }
 
 #logo {
     font-family: Chalkduster, fantasy;
     font-size: 30px;
-    color: #B5FFD9;
+    color: #eee;
+}
+
+#showcase {
+    width: 100%;
+    height: 50px;
+}
+
+#showcase-container {
+    background: url(/img/img-principal.jpg) no-repeat center center/cover;
+    background-image: rgba(0,0,0,1);
 }
 
 .list-group-item {

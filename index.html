@@ -14,59 +14,50 @@
 
     <title>jVs FullStack</title>
 </head>
-<body id='bg'>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body>
+    <!-- Barra de menu -->
+    <nav class="navbar navbar-expand-lg bg-dark">
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
         </button>
-        <a id="logo" class="navbar-brand ml-5" href="#">jVs</a>
+        <a id="logo" class="navbar-brand ml-5" href="#index.html">jVs</a>
     
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto ml-5 mt-2 mt-lg-0 mx-auto">
             <li class="nav-item active px-4">
-            <a class="nav-link" href="index.html">Início <span class="sr-only">(Página atual)</span></a>
-            </li>
-            <!-- <li class="nav-item dropdown px-4">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ferramentas</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="tarefas.html">Tarefas</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item disabled" href="#">Em manutenção</a>
-                </div>
-            </li> -->
-            <li class="nav-item px-4">
-                <a class="nav-link" href="projetos.html">Projetos</a>
+            <a class="nav-link text-white" href="index.html">Início <span class="sr-only">(Página atual)</span></a>
             </li>
             <li class="nav-item px-4">
-                <a class="nav-link" href="contatos.html">Contatos</a>
+                <a class="nav-link text-white" href="p/projetos.html">Projetos</a>
             </li>
-            <!-- <li class="nav-item px-4">
-                <a class="nav-link disabled" href="#">Em manutenção</a>
-            </li> -->
+            <li class="nav-item px-4">
+                <a class="nav-link text-white" href="p/contatos.html">Contatos</a>
+            </li>
         </ul>
         </div>
     </nav>
 
-    <main role="main" class="container my-4 py-4">
-        <header role="header" class="header text-center text-uppercase text-white">
-            <h3>Sejam bem vindos(as) à minha página!!!</h3>
-        </header>
-        <hr class="bg-white">  
-        <div class="row mt-4">
-            <div class="text-justify text-white">
-                <h4 class="">
-                    Olá, criei esta página para armazenar minhas informações sobre meus projetos, cada projeto
-                    poderá ser acessado por esta página através do menu acima.
-                    <a href="testes.html">Teste em geral</a>
-                </h4>
-                <p class="lead">
-                    - jVs
-                </p>
+    <!-- Conteúdo principal -->
+    <section id="showcase">
+        <div id="showcase-container">
+            <header role="header" class="header text-center text-uppercase text-primary">
+                <h3>Sejam bem vindos(as) à minha página!</h3>
+            </header>
+            <hr class="bg-primary">
+            <div class="row mt-4">
+                <div class="text-justify">
+                    <h4 class="">
+                        Olá, criei esta página para armazenar minhas informações sobre meus projetos, cada projeto
+                        poderá ser acessado por esta página através do menu acima.
+                    </h4>
+                    <p class="">
+                        - jVs
+                    </p>
+                </div>
             </div>
         </div>
-    </main>
+    </section>
 
     <div class="footer bg-dark" role="footer">
         <footer>Projeto pessoal de Venícius</footer>
