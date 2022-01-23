@@ -31,13 +31,12 @@ a {
     color: #eee;
     border-radius: 5px;
     transition-duration: 500ms;
-    cursor: pointer;
-    
 }
 
 .btn:hover {
     box-shadow: 100px 0 0 rgba(255,255,255,1) inset;
     color: #30549e;
+    cursor: pointer;
 }
 
 /* navbar */
@@ -140,52 +139,3 @@ a {
     background-color: #eee;
     font-size: 1.2rem;
 }
-
-
-
-
-
-
-
-
-
-#igualdade {
-    font-size: 20px;
-}
-
-/* 
-#operadores {
-    height: 29px;
-} */
-
-.form-select {
-    width: 100%;
-    border-radius: 5px;
-    overflow-y: auto;
-}
-
-.painel,#sinal {
-    border-radius: 5px;
-}
-
-#sinal {
-    width: 2%;
-}
-
-.glass {
-    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: bluer(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.18);
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
-}
-
-.img-sombra {
-    filter: drop-shadow(2px 4px 8px blue);
-}
-
-textarea {
-    resize: none;
-}
-

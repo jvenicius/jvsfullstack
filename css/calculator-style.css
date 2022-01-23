@@ -1,0 +1,31 @@
+#calculator {
+    width: 100%;
+    padding: 50px 0px;
+    background: #eee;
+    
+}
+
+#calculator-container {
+    padding: 50px 0px;;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+#screen {
+    padding-bottom: 50px;
+}
+
+#calculator-screen {
+    width: 50%;
+    height: 2.5rem;
+    font-size: 2rem;
+}
+
+
+
+
+#footer {
+    background: #222;
+    color: #eee;
+}
