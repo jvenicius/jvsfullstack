@@ -7,6 +7,7 @@
     <title>JVS Fullstack</title>
     
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tiroaoalvo-style.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/mobile.css">
 </head>
 <body>
@@ -26,21 +27,17 @@
         </div>
     </nav>
 
-    <!-- project -->
-    <section id="minigames">
-        <div class="headline"><i class="fas fa-gamepad"></i> Minigames</div>
-            <div id="minigames-container">
-                <div class="minigame-item">
-                    <h2><i class="fas fa-bullseye"></i> Tiro ao alvo</h2>
-                    <p>Clique no centro do alvo para ganhar o minigame.</p>
-                    <div class="minigame-btn">
-                        <a href="../minigame/tiroaoalvo.html"><input type="button" class="btn" value="Jogar"></a>
-                    </div>
-                </div>
-            </div>
+    <!-- game -->
+    <section id="game">
+        <div id="head">
+            <a href="../p/minigames.html"><i class="fas fa-arrow-left"></i></a>
+            <h2 class="headline">Tiro ao alvo</h2>
         </div>
-    </section>
+        <hr>
+        <canvas width="800" height="600">
 
+        </canvas>
+    </section>
     <!-- footer -->
     <div id="footer">
         <p>Todos os direitos reservados.</p>
@@ -52,7 +49,7 @@
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- My JS -->
-    <script src="js/main.js"></script>
+    <script src="../js/tiroaoalvo.js"></script>
 
 </body>
 </html>
