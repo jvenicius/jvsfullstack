@@ -24,18 +24,31 @@ a {
     text-transform: uppercase;
 }
 
+.subheadline {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
 .btn {
     font-size: 1.2rem;
     padding: 5px;
     background: #111;
     color: #eee;
     border-radius: 5px;
-    transition-duration: 500ms;
+    border: 5px solid #000 #999 #999 #000;
+    display: flex;
+    /* transition-duration: 500ms; */
 }
 
 .btn:hover {
-    box-shadow: 100px 0 0 rgba(255,255,255,1) inset;
-    color: #30549e;
+    /* box-shadow: 100px 0 0 rgba(255,255,255,1) inset; */
+    /* color: #30549e; */
+    top: 1px;
+    bottom: 1px;
+    border: 5px solid #999 #000 #000 #999;
     cursor: pointer;
 }
 
@@ -76,31 +89,35 @@ a {
 
 /* Project */
 
-#project {
+#project, #minigames {
     width: 100%;
     text-align: center;
     background: #eee;
     padding: 50px;
 }
 
-#project-container {
+#project-container, #minigames-container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 3rem;
     text-align: justify;
 }
 
-#project-container h2{
+#project-container h2, #minigames-container h2 {
     font-size: 2rem;
 }
 
-#project-container p {
+#project-container p, #minigames-container p {
     font-size: 1.2rem;
     padding: 7px 0;
 }
 
-.project-btn {
+.project-btn, .minigames-container{
     padding: 5px;
+}
+
+#minigames-container {
+    height: 80vh;
 }
 
 /* Contact */

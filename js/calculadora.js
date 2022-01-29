@@ -1,8 +1,6 @@
 var display = document.getElementById('calculator-display');
 var buttons = Array.from(document.getElementsByClassName('btn-calc'));
 
-console.log(buttons);
-
 buttons.map( button => {
     button.addEventListener('click', (e) => {
         switch(e.target.value) {
