@@ -1,0 +1,26 @@
+#head {
+    font-size: 1.6rem;
+    align-items: center;
+}
+
+#head:nth-child(1) {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+#game-container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 25px 0;
+}
+
+#game-container iframe {
+    width: 605px;
+    height: 450px;
+}
+
+#game-container #freeway {
+    width: 505px;
+    height: 450px;
+}
