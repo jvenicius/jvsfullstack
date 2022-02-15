@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/tasks-style.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/mobile-tasks-style.css">
 
     <title>Tarefas</title>
 </head>
@@ -50,9 +49,11 @@
             <div id="list">
                 <h2 class="subheadline">Lista de tarefas</h2>
                     <div class="list-item">
-                        <input type="checkbox" name="ok" checked>
-                        <h3>Modelo de tarefa</h3>
-                        <i class="fas fa-caret-down fa-2x"></i>
+                        <details>
+                            <summary> Modelo de tarefa <input type="checkbox" name="ok" checked> </summary>
+                            <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+                        </details>
+                        
                     </div>
             </div>
         </div>

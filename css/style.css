@@ -8,7 +8,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    
 }
 
 a {
@@ -31,6 +30,12 @@ a {
     letter-spacing: 1px;
     padding-bottom: 1rem;
     text-transform: uppercase;
+}
+
+.indisponivel:hover::after {
+    content: "Em desenvolvimento";
+    color: red;
+    font-weight: bold;
 }
 
 .btn {

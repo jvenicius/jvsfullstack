@@ -1,11 +1,11 @@
 #tasks {
     width: 100%;
     padding: 50px 0px;
-    background: url(../img/bg-tasks.jpg) no-repeat center center/cover;
+    background: linear-gradient(#eee,#fff);
     /* overlay */
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: color;
-    color: #eee;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* background-blend-mode: color; */
+    color: #000;
 }
 
 #tasks-container {
@@ -42,7 +42,7 @@
 }
 
 #list {
-    border-left: 1px solid #222 ;
+    border-left: 1px solid #000;
     grid-area: 'b';
     text-align: center;
     padding-left: 50px;
@@ -54,32 +54,28 @@
     height: 3rem;
     background-color: #333;
     color: #eee;
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-    grid-template-areas: 'c t i';
+    display: flex;
+    justify-content: space-between;
 }
 
 .list-item input[type=checkbox] {
-    transform: scale(1.4);
+    transform: translateX(50%) scale(1.4);
     border: 1px solid #eee;
-    margin: auto;
-    grid-area: 'c'
+    cursor: pointer;
 }
 
-.list-item h3 {
+.list-item summary {
     font-size: 1.4rem;
     align-content: center;
     text-align: left;
     font-weight: bolder;
-    grid-area: 't';
 }
 
-.list-item i {
+.list-item summary {
     cursor: pointer;
-    grid-area: 'i';
 }
 
 #footer {
-    background: #222;
-    color: #eee;
+    background: #fff;
+    color: #000;
 }
