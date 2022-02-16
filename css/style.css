@@ -239,7 +239,7 @@ a {
     }
     
     /* Project */
-    #project-container {
+    #project-container, #challenge-container {
         grid-template-columns: 1fr;
     }
     
