@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <link rel="stylesheet" href="../css/challenge-style.css">
+</head>
+<body>
+    
+    <main class="desafio">
+        <a href="../index.html"><i class="fas fa-arrow-left"></i></a><h1 class="titulo">Desafio</h1>
+        <p class="descricao">Descrição: Ler a idade de uma pessoa em dias e converter para anos, meses e dias.</p>
+        <div class="exemplo"><h2>Exemplo:</h2>
+            <div class="exemplo-conteudo">
+                <p><span class="entrada">entrada:</span> 400</p>
+                <p><span class="saida">saida:</span> 1 ano(s), 1 mes(es) e 5 dia(s).</p>
+            </div>
+        </div>
+        <hr>
+        <div class="resolucao">
+            <h2>Resolução</h2>
+            
+            <div class="resolucao-conteudo">
+                <input type="number" id="entradaDigitada" placeholder="Digite a quantidade de dias">    
+            </div>
+            <div class="resolucao-final">
+                <p> <span class="entrada">entrada:</span>&nbsp;<span id="entradaMostrada"></span></p>
+                <p> <span class="saida">saida:</span>&nbsp;<span id="saidaMostrada"></span> </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var entradaDigitada = document.querySelector('#entradaDigitada');
+        var entradaMostrada = document.querySelector('#entradaMostrada');
+        var saidaMostrada = document.querySelector('#saidaMostrada');
+        var dias, meses, anos;
+
+        function setup() {
+            mostraValorDeEntrada();
+            converteDiasEmAnosMesesDias();
+            mostraValorDeSaida();
+        }
+
+        function mostraValorDeEntrada() {
+            if (entradaDigitada.value < 0) {
+                entradaDigitada.value = 0;
+            };
+            entradaMostrada.innerHTML = entradaDigitada.value;
+        }
+
+        function converteDiasEmAnosMesesDias() {
+            var diasDigitados = entradaDigitada.value;
+            anos = (diasDigitados/365);
+            meses = ((anos%1)*365)/30;
+            dias = ((meses%1)*30);
+        }
+
+        function mostraValorDeSaida() {
+            saidaMostrada.innerText = `${parseInt(anos)} ano(s), ${parseInt(meses)} mes(es) e ${Math.round(dias)} dia(s).`;
+        }
+
+        entradaDigitada.onchange = setup;
+
+    </script>
+
+    <!-- FontsAwesome -->
+    <script src="https://kit.fontawesome.com/521fb6fba3.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

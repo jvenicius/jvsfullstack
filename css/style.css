@@ -104,30 +104,30 @@ a {
 
 /* Project */
 
-#project, #minigames {
+#project, #minigames, #challenge {
     width: 100%;
     text-align: center;
     background: #eee;
     padding: 50px;
 }
 
-#project-container, #minigames-container {
+#project-container, #minigames-container, #challenge-container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 3rem;
     text-align: justify;
 }
 
-#project-container h2, #minigames-container h2 {
+#project-container h2, #minigames-container h2, #challenge-container h2 {
     font-size: 2rem;
 }
 
-#project-container p, #minigames-container p {
+#project-container p, #minigames-container p, #challenge-container p {
     font-size: 1.2rem;
     padding: 7px 0;
 }
 
-.project-item, .minigame-item {
+.project-item, .minigame-item, .challenge-item {
     background: #fff;
     padding: 15px;
     border-radius: 10px;
@@ -136,17 +136,16 @@ a {
     transition: 400ms;
 }
 
-.project-item:hover, .minigame-item:hover {
+.project-item:hover, .minigame-item:hover, .challenge-item:hover {
     position: relative;
     cursor: pointer;
     box-shadow: inset 0px 0px 5px #0f4cdb;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-.project-btn {
-    padding: 5px 0 0 0;
-    position: relative;
-    bottom: 0;
+#challenge hr {
+    margin-bottom: 3rem;
+    border: 1px solid black;
 }
 
 /* Contact */

@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(41, 78, 76);
+    font-size: 1.6rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main {
+    background: #eee;
+    box-shadow: 5px 5px 5px 5px #ddd;
+    border-radius: 5px;
+    margin: 5vh auto;
+    width: 75%;
+    padding: 1rem;
+    height: 90vh;
+}
+
+.titulo {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    font-size: 2.6rem;
+}
+
+.exemplo, .resolucao {
+    padding: 1rem 0;
+}
+
+.exemplo h2, .resolucao h2 {
+    font-size: 2rem;
+}
+
+.exemplo-conteudo, .resolucao-final {
+    background: #ddd;
+    width: 75%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.entrada{
+    color: green;
+}
+
+.saida {
+    color: red;
+}
+
+.resolucao-conteudo {
+    text-align: center;
+    margin: 0 0 2rem;
+}
+
+.resolucao-conteudo input {
+    width: 50%;
+    height: 3rem;
+    padding: 0.2rem;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.desafio > a {
+    float: left;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.desafio > a:hover {
+    color: blue;
+}

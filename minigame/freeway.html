@@ -27,24 +27,5 @@
     <script src="https://kit.fontawesome.com/521fb6fba3.js" crossorigin="anonymous"></script>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Meu JS -->
-    <script>
-        var minigame = $("iframe");
-        var travado = false;
-
-        function travaTelaNoJogo(){
-            $(window).scrollTop(0);
-        }
-        
-        function verificaSeTravaTela() {
-            if (travado) {
-                $(window).bind('scroll', travaTelaNoJogo);
-            }
-        }
-
-
-        $(minigame).bind('click', travaTela);
-            
-    </script>
 </body>
 </html>
