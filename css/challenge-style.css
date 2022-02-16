@@ -76,3 +76,18 @@ main {
 .desafio > a:hover {
     color: blue;
 }
+
+@media screen and (max-width: 768px) {
+    .desafio {
+        width: 90%;
+        height: auto;
+    }
+
+    .exemplo-conteudo, .resolucao-final {
+        width: 90%;
+    }
+
+    .resolucao-conteudo {
+        margin-top: 1rem;
+    }
+}
