@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <link rel="stylesheet" href="../css/challenge-style.css">
+
+</head>
+<body>
+    
+    <main class="desafio">
+        <a href="../index.html"><i class="fas fa-arrow-left"></i></a><h1 class="titulo">Desafio</h1>
+        <p class="descricao">Descrição: Ler um número que será a quantidade de frases que serão recebidas, em seguida as frases de maneira que: Se a frase for uma pergunta, responder "Sim, eu sou dev", se a frase não for uma pergunta responder "Eu concordo".</p>
+        <div class="exemplo"><h2>Exemplo:</h2>
+            <div class="exemplo-conteudo">
+                <p><span class="entrada">entrada:</span>
+                    <p>3</p>
+                    <p>Você sabe programar?</p>
+                    <p>Você gosta de Javascript?</p>
+                    <p>O GB é a melhor empresa para se trabalhar.</p>
+                </p>
+                <p><span class="saida">saida:</span>
+                    <p>Sim, eu sou dev.</p>
+                    <p>Sim, eu sou dev.</p>
+                    <p>Eu concordo.</p>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="resolucao">
+            <h2>Resolução</h2>
+            
+            <div class="resolucao-conteudo">
+                <input type="number" id="entradaDigitada" placeholder="Digite a quantidade de frases">
+                <input type="button" id="botao" value="Responder">
+            </div>
+            <div class=".lista-frases">
+                <ul id="listaFrases">
+
+                </ul>
+            </div>
+            <div class="resolucao-final">
+                <p> <span class="entrada">entrada:</span>&nbsp;<span id="entradaMostrada"></span></p>
+                <p> <span class="saida">saida:</span>&nbsp;<span id="saidaMostrada"></span> </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var entradaDigitada = document.querySelector('#entradaDigitada');
+        var entradaMostrada = document.querySelector('#entradaMostrada');
+        var saidaMostrada = document.querySelector('#saidaMostrada');
+        var botao = document.querySelector('#botao');
+        var listaFrases = document.querySelector('#listaFrases');
+        var frases = [];
+        var respostas = [];
+
+        function setup() {
+            limpaResolucao();
+            armazenaFrases();
+            mostraEntrada();
+            respondeFrases();
+            mostraSaida();
+        }
+
+        function mostraEntrada() {
+            var c = 0;
+            if (entradaDigitada.value > 0) {
+                entradaMostrada.innerHTML = `<p>${entradaDigitada.value}</p>`;
+                while (c < frases.length) {
+                    entradaMostrada.innerHTML += `<p>${frases[c]}</p>`;
+                    c++
+                }
+            } else {
+                alert('[ERRO] Digite um número válido!');
+                entradaDigitada.value = 0;
+                entradaDigitada.focus();
+            }           
+        }
+
+        function armazenaFrases() {
+            for (var i = 0; i < entradaDigitada.value; i++) {
+                frases.push(prompt(`Frase ${i+1}: `));
+            }
+        }
+
+        function respondeFrases() {
+            for (var i = 0; i < frases.length; i++) {
+                if (frases[i].indexOf('?') == -1) {
+                    respostas.push('Eu concordo.')
+                } else {
+                    respostas.push('Sim, eu sou dev.')
+                };
+            }
+        }
+    
+        function mostraSaida() {
+            var c = 0;
+            while (c < respostas.length) {
+                saidaMostrada.innerHTML += `<p>${respostas[c]}</p>`;
+                c++
+            }
+        }        
+
+        function limpaResolucao() {
+            frases = [];
+            respostas = [];
+            entradaMostrada.innerHTML = "";
+            saidaMostrada.innerHTML = "";
+        }
+
+        botao.onclick = setup;
+
+    </script>
+
+    <!-- FontsAwesome -->
+    <script src="https://kit.fontawesome.com/521fb6fba3.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
