@@ -1,26 +1,45 @@
-#head {
-    font-size: 1.6rem;
-    align-items: center;
+body {
+    background: linear-gradient(45deg, #ddd,#fff)
 }
 
-#head:nth-child(1) {
+canvas {
+    border: solid 1px black;
+}
+
+.game__preenche-background {
+    height: 100vh;
+}
+
+.game__botao-voltar {
     font-size: 2rem;
     padding: 1rem;
+    position: absolute;
 }
 
-#game-container {
-    width: 100%;
-    margin: auto;
+.game__botao-voltar:hover {
+    color:blue;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 5vw;
+    align-items: top;
+}
+
+.game-head {
     text-align: center;
-    padding: 25px 0;
+    font-size: 1.6rem;
+    padding-top: 2rem;
+    margin-right: 2rem;
 }
 
-#game-container iframe {
+.game-iframe iframe {
     width: 605px;
     height: 450px;
 }
 
-#game-container #freeway {
+.game-iframe .freeway {
     width: 505px;
     height: 450px;
 }

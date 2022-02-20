@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
     <title>JVS Fullstack</title>
-    
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/minigame-style.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/mobile.css">
+    <link rel="stylesheet" media="screen and (max-wclassth: 768px)" href="../css/mobile.css">
 </head>
+
 <body>
 
     <!-- game -->
-    <section id="game">
-        <div id="head">
-            <a href="../p/minigames.html"><i class="fas fa-arrow-left"></i></a>
-            <h2 class="headline"><i class="fas fa-bullseye"></i> Tiro ao alvo</h2>
-        </div>
-        <hr>
-        <canvas width="800" height="600">
+    <section class="game">
+        <a href="../p/minigames.html"><i class="fas fa-arrow-left game__botao-voltar"></i></a>
+        <div class="game-container">
+            <article class="game-head">
+                <h2 class="headline"><i class="fas fa-bullseye"></i> Tiro ao alvo</h2>
+                <p> Instruções: Clique no centro do círculo vermelho para acertar o alvo.</p>
+            </article>
+            <canvas width="800" height="600">
 
-        </canvas>
+            </canvas>
+        </div>
     </section>
 
     <!-- FontsAwesome -->
     <script src="https://kit.fontawesome.com/521fb6fba3.js" crossorigin="anonymous"></script>
     <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- My JS -->
     <script src="../js/tiroaoalvo.js"></script>
 
 </body>
+
 </html>
