@@ -1,0 +1,101 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <link rel="stylesheet" href="desafio.css">
+
+</head>
+
+<body>
+
+    <main class="desafio">
+        <h1 class="titulo">Desafio - Sequência de Fibonacci</h1>
+        <p class="descricao">Descrição: Leonardo percebeu um dos exemplos da sequência ao observar a evolução de uma
+            população de coelhos em um ano, originada por um único casal da espécie. Desde que nenhum coelho morra no
+            processo, a sequência é infinita e começa com os números 0 e 1. A partir do 3º mês, quando os coelhos
+            possuem maturidade sexual para procriar, o matemático notou que a quantidade de casais de coelhos mês a mês
+            cresce segundo uma mesma ordem. Nesse caso, os números seguintes serão a soma dos dois números anteriores,
+            <a
+                href="https://www.coc.com.br/blog/soualuno/matematica/o-que-e-a-sequencia-de-fibonacci#:~:text=0%2C%201%2C%201%2C%202,%2C%201597%2C%202584...">saiba
+                mais</a>. </p>
+        <div class="exemplo">
+            <h2>Exemplo:</h2>
+            <div class="exemplo-conteudo">
+                <p><span class="entrada">entrada:</span>
+                <p>10</p>
+                </p>
+                <p><span class="saida">saida:</span>
+                <p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34...</p>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="resolucao">
+            <h2>Resolução</h2>
+
+            <div class="resolucao-conteudo">
+                <input type="number" id="entradaDigitada" class="mensagem"
+                    placeholder="Quantidade de números na sequência">
+                <input type="button" id="botao" value="Pronto">
+            </div>
+            <div class="resolucao-final">
+                <p> <span class="entrada">entrada:</span>&nbsp;<span id="entradaMostrada"></span></p>
+                <p> <span class="saida">saida:</span>&nbsp;<span id="saidaMostrada"></span> </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var entradaDigitada = document.querySelector('#entradaDigitada');
+        var entradaMostrada = document.querySelector('#entradaMostrada');
+        var saidaMostrada = document.querySelector('#saidaMostrada');
+        var botao = document.querySelector('#botao');
+
+        var Fn;
+        var contador = entradaDigitada.value;
+
+        function setup() {
+            limpaResolucao();
+            mostraEntrada();
+            calculaSequencia(contador);
+            mostraSaida();
+        }
+
+        function mostraEntrada() {
+            if (entradaDigitada.value.length != 0) {
+                entradaMostrada.innerText = entradaDigitada.value;
+            } else {
+                alert('[ERRO] Digite um número válido!');
+                entradaDigitada.focus();
+            }
+        }
+
+        function calculaSequencia(contador) {
+            for (var i = 2; i < contador; i++) {
+                Fn.push(Fn[i - 1] + Fn[i - 2]);
+                console.log(Fn);
+            }
+
+        }
+
+
+        function mostraSaida() {
+            saidaMostrada.innerText = Fn;
+        }
+
+        function limpaResolucao() {
+            Fn = [0, 1];
+            contador = entradaDigitada.value;
+            entradaMostrada.innerHTML = "";
+            saidaMostrada.innerHTML = "";
+        }
+
+        botao.onclick = setup;
+    </script>
+
+</body>
+
+</html>

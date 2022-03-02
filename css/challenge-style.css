@@ -2,124 +2,99 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     background: rgb(41, 78, 76);
     font-size: 1.6rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-main {
+  }
+  
+  main {
     background: #eee;
     box-shadow: 5px 5px 5px 5px #ddd;
     border-radius: 5px;
     margin: 5vh auto;
     width: 75%;
     padding: 1rem;
-}
-
-.titulo {
+  }
+  
+  .titulo {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     text-align: center;
     font-size: 2.6rem;
-}
-
-.exemplo, .resolucao {
+  }
+  
+  .exemplo, .resolucao {
     padding: 1rem 0;
-}
-
-.exemplo h2, .resolucao h2 {
+  }
+  
+  .exemplo h2, .resolucao h2 {
     font-size: 2rem;
-}
-
-.exemplo-conteudo, .resolucao-final {
+  }
+  
+  .exemplo-conteudo, .resolucao-final {
     background: #ddd;
     width: 75%;
     margin: 1rem auto;
     padding: 1rem;
     border-radius: 5px;
-    color: rgb(0, 0, 0);
-}
-
-.entrada{
+    color: #000;
+    text-transform: uppercase;
+  }
+  
+  .entrada{
     color: green;
-}
-
-.saida {
+    text-transform: lowercase;
+  }
+  
+  .saida {
     color: red;
-}
-
-.resolucao-conteudo {
+    text-transform: lowercase;
+  }
+  
+  .resolucao-conteudo {
     text-align: center;
-    margin: 0 0 2rem;
-}
-
-.resolucao-conteudo input[type="number"] {
+    margin: 1rem auto;
+  }
+  
+  .resolucao-conteudo input[type="number"], .mensagem {
     width: 50%;
     height: 3rem;
     padding: 0.2rem;
     font-size: 1.6rem;
     border-radius: 5px;
     border: 2px solid black;
-}
-
-.resolucao-conteudo input[type="button"] {
+    text-transform: uppercase;
+  }
+  
+  .resolucao-conteudo input[type="button"] {
     width: 20%;
     height: 3rem;
     padding: 0.2rem;
     font-size: 1.6rem;
     border-radius: 5px;
     border: 2px solid black;
-    transition: 400ms;
-}
-
-.resolucao-conteudo input[type="button"]:hover {
-    color: white;
-    background: blue;
-    font-weight: bold;
+  
+    background-image: linear-gradient(#fff, #fff);
+    background-size: 0% 100%;
+    background-position-x: right;
+    background-repeat: no-repeat;   
+  
+    transition: background-size 500ms;
+  }
+  
+  .resolucao-conteudo input[type="button"]:hover {
     cursor:pointer;
-}
-
-.resolucao-conteudo input[type="button"]:active {
+  
+    background-position-x: left;
+    background-size: 100% 100%;
+  }
+  
+  .resolucao-conteudo input[type="button"]:active {
     position: relative;
     top: 1px;
     left: 1px;
-}
-
-.desafio > a {
-    float: left;
-    color: black;
-    font-size: 1.5rem;
-}
-
-.desafio > a:hover {
-    color: blue;
-}
-
-@media screen and (max-width: 768px) {
-    .desafio {
-        width: 90%;
-        height: auto;
-    }
-
-    .exemplo-conteudo, .resolucao-final {
-        width: 90%;
-    }
-
-    .resolucao-conteudo {
-        margin-top: 1rem;
-    }
-
-    .resolucao-conteudo input[type="number"] {
-        width: 60%;
-        font-size: 1.2rem;
-    }
-
-    .resolucao-conteudo input[type="button"] {
-        width: 35%;
-        font-size: 1.2rem;
-    }
-}
+  }

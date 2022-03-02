@@ -1,0 +1,100 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <link rel="stylesheet" href="desafio.css">
+
+</head>
+
+<body>
+
+    <main class="desafio">
+        <h1 class="titulo">Desafio - cifra de césar</h1>
+        <p class="descricao">Descrição: É um tipo de cifra de substituição na qual cada letra do texto é substituída por
+            outra, que se apresenta no alfabeto abaixo dela um número fixo de vezes. Por exemplo, com uma troca de três
+            posições, A seria substituído por D, B se tornaria E, e assim por diante.</p>
+        <div class="exemplo">
+            <h2>Exemplo:</h2>
+            <div class="exemplo-conteudo">
+                <p><span class="entrada">entrada:</span>
+                <p>EU SOU DEV</p>
+                </p>
+                <p><span class="saida">saida:</span>
+                <p>HX VRX GHY</p>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="resolucao">
+            <h2>Resolução</h2>
+
+            <div class="resolucao-conteudo">
+                <input type="text" id="entradaDigitada" class="mensagem" placeholder="Digite a mensagem">
+                <input type="button" id="botao" value="Pronto">
+            </div>
+            <div class="resolucao-final">
+                <p> <span class="entrada">entrada:</span>&nbsp;<span id="entradaMostrada"></span></p>
+                <p> <span class="saida">saida:</span>&nbsp;<span id="saidaMostrada"></span> </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var entradaDigitada = document.querySelector('#entradaDigitada');
+        var entradaMostrada = document.querySelector('#entradaMostrada');
+        var saidaMostrada = document.querySelector('#saidaMostrada');
+        var botao = document.querySelector('#botao');
+
+        var mensagem;
+        var mensagemCodificada = '';
+
+        var normal = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        // ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+        var cifradas = 'defghijklmnopqrstuvwxyzabcDEFGHIJKLMNOPQRSTUVWXYZABC';
+
+        function setup() {
+            limpaResolucao();
+            mostraEntrada();
+            codificaMensagem();
+            mostraSaida();
+        }
+
+        function mostraEntrada() {
+            if (entradaDigitada.value.length != 0) {
+                mensagem = entradaDigitada.value;
+                entradaMostrada.innerText = mensagem;
+            } else {
+                alert('[ERRO] Digite ao menos uma letra!');
+                entradaDigitada.focus();
+            }
+        }
+
+        function codificaMensagem() {
+            for (var i = 0; i < mensagem.length; i++) {
+                if (normal.indexOf(mensagem[i]) == -1) {
+                    mensagemCodificada += ' ';
+                } else {
+                    mensagemCodificada += (cifradas[normal.indexOf(mensagem[i])]);
+                };
+            };
+        }
+
+        function mostraSaida() {
+            saidaMostrada.innerText = mensagemCodificada;
+        }
+
+        function limpaResolucao() {
+            mensagemCodificada = ''
+            entradaMostrada.innerHTML = "";
+            saidaMostrada.innerHTML = "";
+        }
+
+        botao.onclick = setup;
+    </script>
+
+</body>
+
+</html>
