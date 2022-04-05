@@ -1,6 +1,10 @@
+body {
+    height: 100vh;
+}
+
 .task {
     display: flex;
-    margin: 6% 0;
+    margin: 4% 0;
     justify-content: space-evenly;
     font-family: "Poppins", sans-serif;
     max-height: 28rem;
@@ -83,12 +87,20 @@
 }
   
 .task-manager::-webkit-scrollbar-track {
-    background: #222;
+    background: #333;
     border-radius: 5px;
 }
   
 .task-manager::-webkit-scrollbar-thumb {
     background-color: #41b883;    /* color of the scroll thumb */
     border-radius: 20px;
-    border-right: 3px solid #222;  /* creates padding around scroll thumb */
+    border-right: 3px solid #333;  /* creates padding around scroll thumb */
+}
+
+
+/* Customizações dinâmicas */
+
+.add-border-top {
+    border-top: 1px solid #41b883;
+    margin: 1.5rem 0;
 }
